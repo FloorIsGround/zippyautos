@@ -15,7 +15,7 @@ if (!$vehicle_id) {
     exit();
 }
 
-// Retrieve the current course details.
+// Retrieve the current vehicle details.
 $vehicle = get_vehicle($vehicle_id);
 $class_id = $vehicle['class_id'];
 $make_id = $vehicle['make_id'];
@@ -35,7 +35,7 @@ if (!$vehicle) {
 <h1>Update Vehicle</h1>
 
 <form action="index.php" method="post">
-    <!-- Hidden fields to pass the action and course ID -->
+    <!-- Hidden fields to pass the action and vehicle ID -->
     <input type="hidden" name="action" value="update_vehicle">
     <input type="hidden" name="vehicle_id" value="<?= $vehicle['ID'] ?>">
     <div>
